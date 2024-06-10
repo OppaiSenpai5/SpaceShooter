@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://chbx3qobxerqo"
+path="res://.godot/imported/I was the maintenece guy.ogg-2216894fbfbd98d109d500d34632954c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Cutscnene/I was the maintenece guy.ogg"
+dest_files=["res://.godot/imported/I was the maintenece guy.ogg-2216894fbfbd98d109d500d34632954c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

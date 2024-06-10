@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx0onmjlrydux"]
+
+[ext_resource type="Script" path="res://IntroScene.gd" id="1_e4orv"]
+[ext_resource type="Texture2D" uid="uid://bi0savgto1aif" path="res://Cutscnene/ShowScne.png" id="2_11k7f"]
+[ext_resource type="AudioStream" uid="uid://jg2wnb2jtasl" path="res://Music/awake10_megaWall.mp3" id="3_kfoh1"]
+
+[sub_resource type="Theme" id="Theme_lktkn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4orv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_11k7f")
+
+[node name="NewGAme" type="Button" parent="."]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 212.0
+offset_right = 963.0
+offset_bottom = 332.0
+text = "New Game"
+
+[node name="ExitGAme" type="Button" parent="."]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 460.0
+offset_right = 1012.0
+offset_bottom = 550.0
+text = "Exit Game"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 40.0
+offset_right = 1119.0
+offset_bottom = 254.0
+theme = SubResource("Theme_lktkn")
+theme_override_colors/font_color = Color(0.780392, 0, 0.0235294, 1)
+theme_override_colors/font_outline_color = Color(0.611765, 0.607843, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 86
+text = "Space Monster In Space"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kfoh1")
+volume_db = -23.029
+autoplay = true
+
+[connection signal="pressed" from="NewGAme" to="." method="_on_new_g_ame_pressed"]
+[connection signal="pressed" from="ExitGAme" to="." method="_on_exit_g_ame_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://yo5q1of5pyyh"]
+
+[ext_resource type="Texture2D" uid="uid://c8o0avd6q5hx4" path="res://CarouselPics/LizardFuture.jpg" id="1_4v34n"]
+
+[resource]
+resource_name = "Picture1"
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_4v34n")

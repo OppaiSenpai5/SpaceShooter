@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbhedjehbsns2"
+path="res://.godot/imported/error.ogg-4c3e42a8b96f18b3882d00b99fbe5487.oggvorbisstr"
+
+[deps]
+
+source_file="res://Bestests levels/error.ogg"
+dest_files=["res://.godot/imported/error.ogg-4c3e42a8b96f18b3882d00b99fbe5487.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2cvihcmqyr8f"]
+
+[ext_resource type="Texture2D" uid="uid://cgnpc6cs3o18r" path="res://Bestests levels/REDThing.png" id="2_nfime"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ryj1f"]
+emission_shape = 1
+emission_sphere_radius = 12.87
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -16.18
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqjh2"]
+transparency = 1
+albedo_color = Color(0.847059, 0.709804, 0.411765, 0.0352941)
+emission_enabled = true
+emission = Color(0.909804, 0.580392, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_x8ark"]
+material = SubResource("StandardMaterial3D_jqjh2")
+radius = 0.1
+height = 0.2
+radial_segments = 4
+rings = 1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rojwa"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = -1.145
+emission_ring_radius = 8.38
+emission_ring_inner_radius = 4.37
+particle_flag_align_y = true
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -33.82
+linear_accel_max = 2.94
+radial_accel_min = -13.24
+radial_accel_max = 14.71
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxtxh"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.0235294)
+albedo_texture = ExtResource("2_nfime")
+billboard_mode = 1
+distance_fade_max_distance = 0.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_ai30e"]
+material = SubResource("StandardMaterial3D_jxtxh")
+size = Vector2(6, 6)
+
+[node name="Vortex" type="Node3D"]
+
+[node name="stars" type="GPUParticles3D" parent="."]
+amount = 100
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_ryj1f")
+draw_pass_1 = SubResource("SphereMesh_x8ark")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0292825, -0.999571, 0, 0.999571, 0.0292825, 0, -0.292138, 0)
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_rojwa")
+draw_pass_1 = SubResource("QuadMesh_ai30e")

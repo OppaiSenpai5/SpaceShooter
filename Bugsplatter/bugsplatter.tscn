@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl6j38wyseoa"]
+
+[ext_resource type="Script" path="res://Bugsplatter/bugsplatter.gd" id="1_lpki0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5irq"]
+size = Vector3(2, 1, 0.29)
+
+[node name="bugsplatter" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="." groups=["bugs"]]
+script = ExtResource("1_lpki0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_p5irq")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.120265)
+visible = false
+modulate = Color(0.823529, 0, 0.258824, 1)
+text = "X"
+font_size = 250
+outline_size = 34

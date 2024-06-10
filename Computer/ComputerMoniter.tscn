@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu4n1hd8w3rbn"]
+
+[ext_resource type="ArrayMesh" uid="uid://gqb8gvpo4fnm" path="res://Computer/ComputerMoniter.mesh" id="1_7qw5t"]
+
+[node name="Computer" type="Node3D"]
+
+[node name="Computer_002" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7qw5t")
+skeleton = NodePath("")
+
+[node name="Camera3D" type="Camera3D" parent="Computer_002"]
+transform = Transform3D(0.0439158, 0, 0.999035, 0, 1, 0, -0.999035, 0, 0.0439158, 4.79455, 1.90926, 0)

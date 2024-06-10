@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck4h2y83fahfe"]
+
+[ext_resource type="Material" uid="uid://jb4o1g815v0v" path="res://Monster/BloodSprayCritical.res" id="1_3bai8"]
+[ext_resource type="Script" path="res://Monster/BloodSprayEnemy.gd" id="1_hnnv0"]
+[ext_resource type="SphereMesh" uid="uid://dwhasou3h46ct" path="res://Monster/Critical.res" id="2_865ru"]
+
+[node name="CriticalBloodSpray" type="GPUParticles3D"]
+emitting = false
+amount = 40
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("1_3bai8")
+draw_pass_1 = ExtResource("2_865ru")
+script = ExtResource("1_hnnv0")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

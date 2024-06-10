@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt075s4lwfea1"
+path="res://.godot/imported/Hell yes dude.ogg-a206e6e515a9260af8c27a8aca5505ee.oggvorbisstr"
+
+[deps]
+
+source_file="res://Player/Hell yes dude.ogg"
+dest_files=["res://.godot/imported/Hell yes dude.ogg-a206e6e515a9260af8c27a8aca5505ee.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

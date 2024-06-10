@@ -1,0 +1,351 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbcjtfem1fgmc"]
+
+[ext_resource type="Script" path="res://PauseScreen/pause_screen.gd" id="1_g8xs1"]
+[ext_resource type="Texture2D" uid="uid://cjgfhev00sxin" path="res://Picture/download.png" id="1_tb1d4"]
+
+[sub_resource type="Theme" id="Theme_wk8ix"]
+
+[sub_resource type="Theme" id="Theme_ti1mw"]
+
+[node name="PauseScreen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8xs1")
+
+[node name="Instructions" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 274.0
+offset_right = 639.0
+offset_bottom = 642.0
+
+[node name="Label2" type="Label" parent="Instructions"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 11.0
+offset_right = 299.0
+offset_bottom = 475.0
+theme_override_font_sizes/font_size = 18
+text = "WASD to move
+Left trigger fire
+E to interact
+R to reload
+ESC pause / unpause
+
+There are 5 levels.
+LV1: 8
+LV2: 13
+LV3: 25
+LV4: 30
+LV5: 35
+
+
+
+
+"
+
+[node name="Label4" type="Label" parent="Instructions"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 12.0
+offset_right = 604.0
+offset_bottom = 350.0
+text = "Kill all the monsters
+
+There are guns on the wall you can buy look around
+
+After buying the guns interact again for ammo for 500 pts
+
+If you see a big monster shoot him in the head.
+
+"
+autowrap_mode = 2
+
+[node name="Settings" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 639.0
+offset_bottom = 271.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer"]
+layout_mode = 2
+text = "Mouse Sensitivity Y"
+
+[node name="Mouse_Y_Slider" type="HSlider" parent="Settings/VBoxContainer"]
+layout_mode = 2
+min_value = -0.15
+max_value = -0.01
+step = 0.01
+value = -0.01
+
+[node name="Label2" type="Label" parent="Settings/VBoxContainer"]
+layout_mode = 2
+text = "Mouse Sensitivity X"
+
+[node name="Mouse_X_Slider" type="HSlider" parent="Settings/VBoxContainer"]
+layout_mode = 2
+min_value = -0.15
+max_value = -0.01
+step = 0.01
+value = -0.15
+
+[node name="Label3" type="Label" parent="Settings/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Music_Slider" type="HSlider" parent="Settings/VBoxContainer"]
+layout_mode = 2
+min_value = -20.0
+max_value = -2.0
+step = 0.125
+value = -10.0
+
+[node name="Label4" type="Label" parent="Settings/VBoxContainer"]
+layout_mode = 2
+text = "Player Sound Effects"
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer"]
+layout_mode = 2
+min_value = -12.0
+max_value = 2.0
+value = -2.0
+rounded = true
+
+[node name="Upgrades" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 642.0
+offset_top = 12.0
+offset_right = 1144.0
+offset_bottom = 357.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = -120.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 36
+
+[node name="Health" type="HBoxContainer" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer/Health"]
+layout_mode = 2
+text = "Health"
+
+[node name="Lv1" type="Button" parent="Upgrades/VBoxContainer/Health"]
+layout_mode = 2
+text = "120"
+
+[node name="Lv2" type="Button" parent="Upgrades/VBoxContainer/Health"]
+layout_mode = 2
+disabled = true
+text = "140"
+
+[node name="Lv3" type="Button" parent="Upgrades/VBoxContainer/Health"]
+layout_mode = 2
+disabled = true
+text = "200"
+
+[node name="Shotgun" type="HBoxContainer" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer/Shotgun"]
+layout_mode = 2
+text = "Shotgun"
+
+[node name="Lv1" type="Button" parent="Upgrades/VBoxContainer/Shotgun"]
+layout_mode = 2
+text = "Light"
+
+[node name="Lv2" type="Button" parent="Upgrades/VBoxContainer/Shotgun"]
+layout_mode = 2
+disabled = true
+text = "Ammo"
+
+[node name="Lv3" type="Button" parent="Upgrades/VBoxContainer/Shotgun"]
+layout_mode = 2
+disabled = true
+text = "Damage"
+
+[node name="Mac10" type="HBoxContainer" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer/Mac10"]
+layout_mode = 2
+text = "Mac10"
+
+[node name="Lv1" type="Button" parent="Upgrades/VBoxContainer/Mac10"]
+layout_mode = 2
+text = "Laser"
+
+[node name="Lv2" type="Button" parent="Upgrades/VBoxContainer/Mac10"]
+layout_mode = 2
+disabled = true
+text = "Fire Rate"
+
+[node name="Lv3" type="Button" parent="Upgrades/VBoxContainer/Mac10"]
+layout_mode = 2
+disabled = true
+text = "Ammo"
+
+[node name="Glock" type="HBoxContainer" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer/Glock"]
+layout_mode = 2
+text = "Glock"
+
+[node name="Lv1" type="Button" parent="Upgrades/VBoxContainer/Glock"]
+layout_mode = 2
+text = "Laser"
+
+[node name="Lv2" type="Button" parent="Upgrades/VBoxContainer/Glock"]
+layout_mode = 2
+disabled = true
+text = "Fire Rate"
+
+[node name="Lv3" type="Button" parent="Upgrades/VBoxContainer/Glock"]
+layout_mode = 2
+disabled = true
+text = "Damage"
+
+[node name="PopGun" type="HBoxContainer" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer/PopGun"]
+layout_mode = 2
+text = "PopGun"
+
+[node name="Lv1" type="Button" parent="Upgrades/VBoxContainer/PopGun"]
+layout_mode = 2
+text = "Laser"
+
+[node name="Lv2" type="Button" parent="Upgrades/VBoxContainer/PopGun"]
+layout_mode = 2
+disabled = true
+text = "Reload"
+
+[node name="Lv3" type="Button" parent="Upgrades/VBoxContainer/PopGun"]
+layout_mode = 2
+disabled = true
+text = "Damage"
+
+[node name="Cost" type="VBoxContainer" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -101.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Upgrades/Cost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "Cost:"
+
+[node name="Label2" type="Label" parent="Upgrades/Cost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1000"
+
+[node name="Label3" type="Label" parent="Upgrades/Cost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Points:"
+
+[node name="Label4" type="Label" parent="Upgrades/Cost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "1300"
+
+[node name="Links" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 360.0
+offset_right = 1143.0
+offset_bottom = 642.0
+
+[node name="TextureRect" type="TextureRect" parent="Links"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 73.0
+offset_right = 189.0
+offset_bottom = 241.0
+texture = ExtResource("1_tb1d4")
+
+[node name="Button" type="Button" parent="Links"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 80.0
+offset_right = 427.0
+offset_bottom = 152.0
+text = "View my youtube Channle"
+
+[node name="Button2" type="Button" parent="Links"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 181.0
+offset_right = 405.0
+offset_bottom = 232.0
+text = "Exit Game"
+
+[node name="Label4" type="Label" parent="Links"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 19.0
+offset_right = 338.0
+offset_bottom = 57.0
+theme = SubResource("Theme_wk8ix")
+theme_override_font_sizes/font_size = 21
+text = " Average Godot Enjoyer"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1068.0
+offset_top = 629.0
+offset_right = 1140.0
+offset_bottom = 644.0
+theme = SubResource("Theme_ti1mw")
+theme_override_font_sizes/font_size = 8
+text = "Dont eat the bugs."
+
+[connection signal="drag_ended" from="Settings/VBoxContainer/Mouse_Y_Slider" to="." method="_on_mouse_y_slider_drag_ended"]
+[connection signal="changed" from="Settings/VBoxContainer/Mouse_X_Slider" to="." method="_on_mouse_x_slider_changed"]
+[connection signal="drag_ended" from="Settings/VBoxContainer/Mouse_X_Slider" to="." method="_on_mouse_x_slider_drag_ended"]
+[connection signal="changed" from="Settings/VBoxContainer/Music_Slider" to="." method="_on_music_slider_changed"]
+[connection signal="drag_ended" from="Settings/VBoxContainer/Music_Slider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="drag_ended" from="Settings/VBoxContainer/HSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="pressed" from="Links/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Links/Button2" to="." method="_on_button_2_pressed"]

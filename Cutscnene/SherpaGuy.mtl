@@ -1,0 +1,63 @@
+# Blender MTL File: 'SherpaGuy.blend'
+# Material Count: 5
+
+newmtl combatboots
+Ns 0.784300
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\John\\Desktop\\textures\\col.png
+map_d C:\\Users\\John\\Desktop\\textures\\col.png
+
+newmtl guy
+Ns 4.999997
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.950000 0.850000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\John\\Desktop\\textures\\middleage_lightskinned_male_diffuse.png
+map_d C:\\Users\\John\\Desktop\\textures\\middleage_lightskinned_male_diffuse.png
+
+newmtl high-poly
+Ns 170.420829
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\John\\Desktop\\textures\\brown_eye.png
+
+newmtl male_casualsuit06
+Ns 1.960998
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\John\\Desktop\\textures\\male_casualsuit06_normal.png
+map_Kd C:\\Users\\John\\Desktop\\textures\\male_casualsuit06_diffuse.png
+map_d C:\\Users\\John\\Desktop\\textures\\male_casualsuit06_diffuse.png
+
+newmtl sherpa_hat
+Ns 1.960998
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\John\\Desktop\\textures\\Sherpa_Hat_NRM.png
+map_Kd C:\\Users\\John\\Desktop\\textures\\Sherpa_Hat_COL.png
+map_d C:\\Users\\John\\Desktop\\textures\\Sherpa_Hat_COL.png
